@@ -9,3 +9,7 @@ https://github.com/Remchi/bookworm-react
 
 ## Components Used
 Semantic UI 
+
+https://react.semantic-ui.com/introduction
+
+npm install semantic-ui-react --save
