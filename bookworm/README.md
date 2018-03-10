@@ -2,17 +2,13 @@
 
 # Bookworm is a Full stack app consistenting of React Js App and Node Js Express API
 
-This app is a sample app to illustrate form navigation, authentication and other real world web app interactions in a React Js app.
-
-## Resources:
-https://www.youtube.com/watch?v=NO2DaxhoWHk&t=398s
-
-https://github.com/Remchi/bookworm-react
+The main Bookworm project consists of two following projects
 
 
-## Components Used
-Semantic UI 
+## bookworm/bookworm-react
 
-https://react.semantic-ui.com/introduction
+React Js App
 
-npm install semantic-ui-react --save
+## bookworm/bookworm-api
+
+Node Js Express Server
