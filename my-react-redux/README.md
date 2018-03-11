@@ -5,6 +5,8 @@ my-react-redux is a sample react js app used to demonstrate usage of react and r
 ## Resources:
 https://www.youtube.com/watch?v=S66rHpyU-Eg&t=214s 
 
+https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3
+
 
 ## Notes:
 
@@ -23,5 +25,7 @@ Basically all data is mapped to props so the App Component can interact with it 
 =============================================================================================================================================
 
 Thunk: Middleware library to help with redux dispatch
+
+Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
 
 
