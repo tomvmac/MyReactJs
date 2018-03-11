@@ -4,3 +4,24 @@ my-react-redux is a sample react js app used to demonstrate usage of react and r
 
 ## Resources:
 https://www.youtube.com/watch?v=S66rHpyU-Eg&t=214s 
+
+
+## Notes:
+
+Store: Stores the state in redux
+
+Action: Contains a type and payload dispatch by the app to send to Reducer
+
+Reducer: Reducer processes actions
+
+Provider: Allows react app to gain visbility to store
+
+Connect: App Component establishes connection to store to retrieve data
+
+Basically all data is mapped to props so the App Component can interact with it via props.  Functions that do these are mapStateToProps and mapActionToProps.
+
+=============================================================================================================================================
+
+Thunk: Middleware library to help with redux dispatch
+
+

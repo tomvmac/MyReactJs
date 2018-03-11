@@ -5,28 +5,37 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 // import redux store
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
+// import redux provider to get access to store
+import { Provider } from 'react-redux';
 
 // redux reducers
-function productReducer(state = [], action) {
-   return state;
-}
+import productsReducer from './reducers/products-reducers';
+import userReducer from './reducers/user-reducer';
 
-function userReducer(state = '', action) {
-    return state;
- }
 
  // combine reducers
  const allReducers = combineReducers({
-     products: productReducer,
+     products: productsReducer,
      user: userReducer
  })
 
+ const allStoreEnhancers = compose(
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
+
+// optional initial state data
+const initStoreState = {
+    products: [{name: 'iPhone'}],
+    user: 'Tom'
+}
+
 // create redux store
-const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(allReducers, initStoreState, allStoreEnhancers);
 
 // get current State from store
-console.log(store.getState());
+//console.log(store.getState());
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// wrap App element into redux Provider so the entire App can access the store
+ReactDOM.render(<Provider store={store}><App aRandomProps="whatever" /></Provider>, document.getElementById('root'));
 registerServiceWorker();
